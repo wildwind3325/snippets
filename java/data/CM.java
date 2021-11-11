@@ -11,6 +11,7 @@ public class CM {
         try {
             Class.forName(driver);
             DBConfig config = new DBConfig(url, user, password);
+            conns.put(name, config);
             return true;
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
