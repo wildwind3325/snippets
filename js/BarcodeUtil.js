@@ -1,5 +1,3 @@
-
-
 /**
  * 条形码相关
  */
@@ -103,4 +101,3 @@ class BarcodeUtil {
   }
 }
 export default BarCodeUtil;
-

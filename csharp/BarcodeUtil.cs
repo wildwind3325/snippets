@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -75,7 +75,6 @@ namespace WinTest
                     int value = 0;
                     for (int k = 0; k < 4; k++)
                     {
-                        Console.WriteLine(bmp.GetPixel((j * 4) + k, i).B);
                         if (bmp.GetPixel((j * 4) + k, i).B == 0)
                         {
                             value += (int)Math.Pow(2, 3 - k);
@@ -84,7 +83,6 @@ namespace WinTest
                     sbContent.Append(value.ToString("X"));
                 }
             }
-            Console.WriteLine(sbContent.Length + ": " + sbContent.ToString());
             StringBuilder sbResult = new StringBuilder();
             sbResult.Append("~DGOUTSTR01," + bmp.Width * bmp.Height / 8 + "," + bmp.Width / 8 + ",");
             int count = 1;
