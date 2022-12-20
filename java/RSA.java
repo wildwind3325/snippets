@@ -1,0 +1,11 @@
+KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
+kpg.initialize(1024);
+KeyPair kp = kpg.genKeyPair();
+PublicKey pub = kp.getPublic();
+PrivateKey pri = kp.getPrivate();
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("E:\\Download\\pub.dat"));
+oos.writeObject(pub);
+oos.close();
+oos = new ObjectOutputStream(new FileOutputStream("E:\\Download\\pri.dat"));
+oos.writeObject(pri);
+oos.close();
