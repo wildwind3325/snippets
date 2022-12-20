@@ -1,0 +1,4 @@
+python -m venv --system-site-packages .\venv
+.\venv\Scripts\activate
+pip install --upgrade pip
+deactivate
