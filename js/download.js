@@ -26,6 +26,10 @@ res.send(buffer); // 不能阻止自动打开
 
 // 设置响应头
 res.attachment('D:/to/logo.png'); // 告诉浏览器强制下载附件
+
 // 将文件buffer转为前端下载最佳方法如下
-res.writeHead(200, [['Content-Disposition', 'attachment; filename=' + filename]]);
+res.status(200).set({
+      'Content-Type': 'image/png',
+      'Content-Disposition': 'attachment; filename=logo.png'
+    });
 res.end(buffer);
