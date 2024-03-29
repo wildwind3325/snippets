@@ -1,0 +1,1 @@
+select t1.* from t_ICItem t1, (SELECT TOP 20 ROW_NUMBER() OVER (order by FItemID) n, FItemID from t_ICItem) t2 where t1.FItemID = t2.FItemID and t2.n > 10 order by t2.n
